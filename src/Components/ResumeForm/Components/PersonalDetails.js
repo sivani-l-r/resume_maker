@@ -45,8 +45,8 @@ function PersonalDetails({ formData, handleChange }) {
                 <label>LinkedIn:</label>
                 <input
                     type="text"
-                    name="linkedln"
-                    value={formData.linkedln}
+                    name="linkedin"
+                    value={formData.linkedin}
                     onChange={(e) => handleChange(e)}
                 />
             </div>

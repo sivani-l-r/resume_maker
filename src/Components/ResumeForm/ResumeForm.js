@@ -6,7 +6,6 @@ import Experience from "./Components/Experience";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import { resumePDF } from "../../utils/pdfUtils";
-import FinalData from "./Components/FinalDetails";
 import ExtraCurriculurs from "./Components/ExtraCurriculurs";
 import Prizes from "./Components/Prizes";
 import FinalDetails from "./Components/FinalDetails";
@@ -114,8 +113,16 @@ function ResumeForm() {
         resumePDF(personalData, formData);
     };
 
+    // const handleLoadSavedResume = () =>
+    // {
+        
+    // }
+
     return (
-        <div className="resume-form">
+        <div>
+            {/* <button >Load Saved Resume</button> */}
+            <div className="resume-form">
+
         {renderStep()}
         <div className="button-group">
             {currentStep > 0 && <button type="button" onClick={handlePrev}>Prev</button>}
@@ -124,6 +131,7 @@ function ResumeForm() {
             ) : (
                 <button type="submit" onClick={handleFormSubmit}>Submit</button>
             )}
+        </div>
         </div>
         </div>
     );
